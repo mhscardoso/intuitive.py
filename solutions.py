@@ -7,7 +7,7 @@ load_dotenv()
 
 def solution_one():
 	LINK = os.getenv("LINK")
-	src = Scrapper(LINK, "files.zip")
+	src = Scrapper(LINK, "files.zip", "data")
 	src.get_files()
 
 
