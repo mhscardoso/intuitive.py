@@ -44,6 +44,30 @@ Here, you must have docker installed to test. All the files are copied to a cont
 where postgres BULK INSERT in the tables.
 The answers queries are the files: query1.sql and query2.sql
 
+Expect file structure:
+
+```
+sql_tests
+│   
+│   docker-compose.yml
+|   query1.sql
+|   query2.sql
+|   schema.sql    
+│
+└───data
+│   │   relatorio.csv
+│   │
+│   └───2022
+│   |   │   1T2022.csv
+│   |   │   2T2022.csv
+|   |   |   3T2022.csv
+|   |   |   4T2022.csv
+│   └───2023
+│       │   1T2023.csv
+│       │   2T2023.csv
+|       |   3T2023.csv
+```
+
 ## API
 
 Here, you will only find the API in python, with a docker-compose to build a container
@@ -52,3 +76,15 @@ with everything.
 The "requirements.txt" are also differents (without pandas and pypdf).
 
 It was made using FastAPI.
+
+Expect file structure:
+
+```
+api
+│   
+└───backend
+│   │   ...
+│   │
+│   └───data
+│   |   │   relatorio.csv
+```
